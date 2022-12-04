@@ -9,7 +9,7 @@ app.set("view engine", "ejs")
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static("public"))
 
-mongoose.connect("mongodb+srv://AdminAjith:@cluster0.wc75hh7.mongodb.net/todoListDB")
+mongoose.connect("mongodb+srv://Ajith:Ajith@cluster0.455vy4c.mongodb.net/todoListDB")
 
 const itemsSchema = {
     name: String
@@ -83,11 +83,8 @@ app.post("/delete", (req,res) =>{
     })
 })
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 4000;
-}
 
-app.listen(port, () =>{
+
+app.listen(4000, () =>{
     console.log("start of server");
 })
